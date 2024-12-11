@@ -1,1 +1,1 @@
-# rna_seq_project_group_5
+# Rna Seq Project Group 5
