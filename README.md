@@ -6,7 +6,7 @@
 
 ## Sequencing Data Quality Control and Mapping 
 
-## Gene Counts (TBD)
+## Read Alignment and Gene Count Quantification
 
 ## RNA-Seq Exploratory Data Analysis
 
