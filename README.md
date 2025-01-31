@@ -47,11 +47,11 @@ Both files can also be obtained from the [Ensembl FTP website](https://www.ensem
 (Note: [run_bam_sort_coordinate.sh](scripts/QC/multi-qc.slurm) will loop over all samples and run the [bam_sort_coordinate.slurm](scripts/QC/multi-qc.slurm) script to make sure all samples ran in parallel when working in a cluster)
 
 ## Read Alignment and Gene Count Quantification
-
+The sorted and indexed BAM files produced from previous process were then used as input for identifying host genes present in the sample and quantify it by calculating reads that were aligned with the exons from the annotation file. This process can be done by running [featurecounts.slurm](scripts/QC/multi-qc.slurm). 
 
 ## Differential Gene Expression Analysis in R
 
-- Once the text file from featurecounts is obtained, differential gene expression analysis can be done. Most of the process was done using DEseq2. The first process would be to do the RNA-Seq Exploratory Data Analysis and visualize it with a PCA plot to check for similar gene expression profiles or outliers. Next, identifying the genes that were upregulated or downregulated in response of the infection, which can be visualized with a volcano plot and heatmaps. Lastly, Overrepresentation Analysis was done by doing Gene Ontology (GO) enrichment analysis to identify overrepresented biological processes, molecular functions, and cellular components associated from the genes.
+- Once the text file from featurecounts is obtained, Differential Gene Expression Analysis can be done. Most of the process was done using DEseq2. The first process would be to do the RNA-Seq Exploratory Data Analysis and visualize it with a PCA plot to check for similar gene expression profiles or outliers. Next, identifying the genes that were upregulated or downregulated in response of the infection, which can be visualized with a volcano plot and heatmaps. Lastly, Overrepresentation Analysis was done by doing Gene Ontology (GO) enrichment analysis to identify overrepresented biological processes, molecular functions, and cellular components associated from the genes.
 - All of the commands are available in [something.r](aa)
 
 
