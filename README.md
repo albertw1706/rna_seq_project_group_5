@@ -51,9 +51,7 @@ Both files can also be obtained from the [Ensembl FTP website](https://www.ensem
 
 ## Differential Gene Expression Analysis in R
 
-RNA-Seq Exploratory Data Analysis
+- Once the text file from featurecounts is obtained, differential gene expression analysis can be done. Most of the process was done using DEseq2. The first process would be to do the RNA-Seq Exploratory Data Analysis and visualize it with a PCA plot to check for similar gene expression profiles or outliers. Next, identifying the genes that were upregulated or downregulated in response of the infection, which can be visualized with a volcano plot and heatmaps. Lastly, Overrepresentation Analysis was done by doing Gene Ontology (GO) enrichment analysis to identify overrepresented biological processes, molecular functions, and cellular components associated from the genes.
+- All of the commands are available in [something.r](aa)
 
-Differential Gene Expression Analysis
-
-Overrepresentation Analysis
 
