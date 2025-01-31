@@ -54,6 +54,6 @@ The sorted and indexed BAM files produced from previous process were then used a
 ## Differential Gene Expression Analysis in R
 
 - Once the text file from featurecounts is obtained, Differential Gene Expression Analysis can be done. Most of the process was done using DEseq2. The first process would be to do the RNA-Seq Exploratory Data Analysis and visualize it with a PCA plot to check for similar gene expression profiles or outliers. Next, identifying the genes that were upregulated or downregulated in response of the infection, which can be visualized with a volcano plot. Lastly, Overrepresentation Analysis was done by doing Gene Ontology (GO) enrichment analysis to identify overrepresented biological processes, molecular functions, and cellular components associated from the genes.
-- All of the commands are available in [deseq.r](scripts/DE_Analysis/deseq.r)
+- All of the commands are available in [deseq.R](scripts/DE_Analysis/deseq.R)
 
 
