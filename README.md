@@ -24,10 +24,11 @@ The dataset utilized for this project was obtained from a subset of the dataset 
 | SRR7821968 | Blood   | Control   |
 | SRR7821969 | Blood   | Control   |
 | SRR7821970 | Blood   | Control   |
+
 Table 1. Sample Metadata Information
 
 ## Sequencing Data Quality Control and Mapping 
-
+Start with running FastQC to check the quality of the sequencing data by running [qc.slurm](scripts/QC/qc.slurm).
 
 ## Read Alignment and Gene Count Quantification
 
