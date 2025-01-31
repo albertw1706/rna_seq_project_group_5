@@ -49,9 +49,11 @@ Both files can also be obtained from the [Ensembl FTP website](https://www.ensem
 ## Read Alignment and Gene Count Quantification
 
 
-## RNA-Seq Exploratory Data Analysis
+## Differential Gene Expression Analysis in R
 
-## Differential Gene Expression Analysis
+RNA-Seq Exploratory Data Analysis
 
-## Overrepresentation Analysis
+Differential Gene Expression Analysis
+
+Overrepresentation Analysis
 
