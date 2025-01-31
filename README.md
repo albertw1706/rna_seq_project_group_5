@@ -49,7 +49,7 @@ Both files can also be obtained from the [Ensembl FTP website](https://www.ensem
 (Note: [run_bam_sort_coordinate.sh](scripts/Mapping/run_bam_sort_coordinate.sh) will loop over all samples and run the [bam_sort_coordinate.slurm](scripts/Mapping/bam_sort_coordinate.slurm) script to make sure all samples ran in parallel when working in a cluster)
 
 ## Read Alignment and Gene Count Quantification
-The sorted and indexed BAM files produced from previous process were then used as input for identifying host genes present in the sample and quantify it by calculating reads that were aligned with the exons from the annotation file. This process can be done by running [featurecounts.slurm](scripts/QC/multi-qc.slurm). 
+The sorted and indexed BAM files produced from previous process were then used as input for identifying host genes present in the sample and quantify it by calculating reads that were aligned with the exons from the annotation file. This process can be done by running [feature_counts.slurm](scripts/featurecounts/feature_counts.slurm). 
 
 ## Differential Gene Expression Analysis in R
 
