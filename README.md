@@ -33,7 +33,9 @@ Table 1. Sample Metadata Information
 - Once all the reports from each samples were obtained, run [multi-qc.slurm](scripts/QC/multi-qc.slurm) to run MultiQC that makes all the html report files into one single html report file.
 
 After checking the quality of the sequencing data, collect the reference genome and GTF file by running :
+
 wget https://ftp.ensembl.org/pub/release-113/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz 
+
 wget https://ftp.ensembl.org/pub/release-113/gtf/mus_musculus/Mus_musculus.GRCm39.113.gtf.gz
 
 Both files can also be obtained from the [Ensembl FTP website](https://www.ensembl.org/info/data/ftp/index.html) by downloading from the DNA FASTA section and Gene sets GTF section for the species Mus Musculus.
@@ -42,7 +44,7 @@ Both files can also be obtained from the [Ensembl FTP website](https://www.ensem
 (Note: [run_map.sh](scripts/QC/multi-qc.slurm) will loop over all samples and run the [map.slurm](scripts/QC/multi-qc.slurm) script to make sure all samples ran in parallel when working in a cluster)
 
 - Next, convert the SAM files to BAM format, sort and then index each BAM files to prepare the files for the next step by running the [run_bam_sort_coordinate.sh](scripts/QC/multi-qc.slurm). 
-Note: [run_bam_sort_coordinate.sh](scripts/QC/multi-qc.slurm) will loop over all samples and run the [bam_sort_coordinate.slurm](scripts/QC/multi-qc.slurm) script to make sure all samples ran in parallel when working in a cluster)
+(Note: [run_bam_sort_coordinate.sh](scripts/QC/multi-qc.slurm) will loop over all samples and run the [bam_sort_coordinate.slurm](scripts/QC/multi-qc.slurm) script to make sure all samples ran in parallel when working in a cluster)
 
 ## Read Alignment and Gene Count Quantification
 
