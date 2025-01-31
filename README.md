@@ -30,6 +30,8 @@ Table 1. Sample Metadata Information
 ## Sequencing Data Quality Control and Mapping 
 Start with running FastQC to check the quality of the sequencing data by running [qc.slurm](scripts/QC/qc.slurm).
 
+Once all the reports from each samples were obtained, run [multi-qc.slurm](scripts/QC/multi-qc.slurm) to run MultiQC that makes all the html report files into one single html report file.
+
 ## Read Alignment and Gene Count Quantification
 
 ## RNA-Seq Exploratory Data Analysis
