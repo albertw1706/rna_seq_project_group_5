@@ -40,11 +40,11 @@ wget https://ftp.ensembl.org/pub/release-113/gtf/mus_musculus/Mus_musculus.GRCm3
 
 Both files can also be obtained from the [Ensembl FTP website](https://www.ensembl.org/info/data/ftp/index.html) by downloading from the DNA FASTA section and Gene sets GTF section for the species Mus Musculus.
 
-- Once the reference genome is downloaded, index the reference genome by running [index.slurm](scripts/QC/multi-qc.slurm), then run genome assembly with [run_map.sh](scripts/QC/multi-qc.slurm). 
-(Note: [run_map.sh](scripts/QC/multi-qc.slurm) will loop over all samples and run the [map.slurm](scripts/QC/multi-qc.slurm) script to make sure all samples ran in parallel when working in a cluster)
+- Once the reference genome is downloaded, index the reference genome by running [index.slurm](scripts/Mapping/index.slurm), then run genome assembly with [run_map.sh](scripts/Mapping/run_map.sh). 
+(Note: [run_map.sh](scripts/Mapping/run_map.sh) will loop over all samples and run the [map.slurm](scripts/Mapping/map.slurm) script to make sure all samples ran in parallel when working in a cluster)
 
-- Next, convert the SAM files to BAM format, sort and then index each BAM files to prepare the files for the next step by running the [run_bam_sort_coordinate.sh](scripts/QC/multi-qc.slurm). 
-(Note: [run_bam_sort_coordinate.sh](scripts/QC/multi-qc.slurm) will loop over all samples and run the [bam_sort_coordinate.slurm](scripts/QC/multi-qc.slurm) script to make sure all samples ran in parallel when working in a cluster)
+- Next, convert the SAM files to BAM format, sort and then index each BAM files to prepare the files for the next step by running the [run_bam_sort_coordinate.sh](scripts/Mapping/run_bam_sort_coordinate.sh). 
+(Note: [run_bam_sort_coordinate.sh](scripts/Mapping/run_bam_sort_coordinate.sh) will loop over all samples and run the [bam_sort_coordinate.slurm](scripts/Mapping/bam_sort_coordinate.slurm) script to make sure all samples ran in parallel when working in a cluster)
 
 ## Read Alignment and Gene Count Quantification
 The sorted and indexed BAM files produced from previous process were then used as input for identifying host genes present in the sample and quantify it by calculating reads that were aligned with the exons from the annotation file. This process can be done by running [featurecounts.slurm](scripts/QC/multi-qc.slurm). 
