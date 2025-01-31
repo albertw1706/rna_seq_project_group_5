@@ -160,32 +160,11 @@ ego_bp_blood <- enrichGO(gene  = blood_upreg_names, # List of selected genes
                 ont           = "BP",
                 readable      = TRUE)
 
-ego_cc_blood <- enrichGO(gene  = blood_upreg_names, # List of selected genes 
-                universe      = all_names, # List of all genes
-                keyType       = "ENSEMBL",
-                OrgDb         = org.Mm.eg.db,
-                ont           = "CC",
-                readable      = TRUE)
-
-ego_mf_blood <- enrichGO(gene  = blood_upreg_names, # List of selected genes 
-                universe      = all_names, # List of all genes
-                keyType       = "ENSEMBL",
-                OrgDb         = org.Mm.eg.db,
-                ont           = "MF",
-                readable      = TRUE)
 
 # Plot the tree plot of each of the ontologies
 ego_bp_lung_sym <- setReadable(ego_bp_lung, 'org.Mm.eg.db', 'ENSEMBL')
 ego_bp_lung_sym2 <- pairwise_termsim(ego_bp_lung_sym)
 p1 <- treeplot(ego_bp_lung_sym2)
-
-ego_cc_lung_sym <- setReadable(ego_cc_lung, 'org.Mm.eg.db', 'ENSEMBL')
-ego_cc_lung_sym2 <- pairwise_termsim(ego_cc_lung_sym)
-p2 <- treeplot(ego_cc_lung_sym2)
-
-ego_mf_lung_sym <- setReadable(ego_mf_lung, 'org.Mm.eg.db', 'ENSEMBL')
-ego_mf_lung_sym2 <- pairwise_termsim(ego_mf_lung_sym)
-p3 <- treeplot(ego_mf_lung_sym2)
 
 
 
