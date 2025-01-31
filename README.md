@@ -34,6 +34,14 @@ Once all the reports from each samples were obtained, run [multi-qc.slurm](scrip
 
 ## Read Alignment and Gene Count Quantification
 
+After checking the quality of the sequencing data, collect the reference genome and GTF file by running :
+wget https://ftp.ensembl.org/pub/release-113/fasta/mus_musculus/dna/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz 
+wget https://ftp.ensembl.org/pub/release-113/gtf/mus_musculus/Mus_musculus.GRCm39.113.gtf.gz
+
+Both files can also be obtained from the [Ensembl FTP website](https://www.ensembl.org/info/data/ftp/index.html) by downloading from the DNA FASTA section and Gene sets GTF section for the species Mus Musculus.
+
+
+
 ## RNA-Seq Exploratory Data Analysis
 
 ## Differential Gene Expression Analysis
